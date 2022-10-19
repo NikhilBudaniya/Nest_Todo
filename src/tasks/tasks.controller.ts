@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
-import { ApiAcceptedResponse, ApiBadGatewayResponse, ApiBadRequestResponse, ApiCreatedResponse } from '@nestjs/swagger';
+import { ApiAcceptedResponse, ApiBadGatewayResponse, ApiBadRequestResponse, ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
 import { TaskService } from './task.service';
-
+@ApiTags('Tasks')
 @Controller('tasks')
 export class TasksController {
     constructor(private readonly taskService:TaskService){}
